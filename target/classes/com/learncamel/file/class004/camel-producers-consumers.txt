@@ -1,0 +1,22 @@
+######################################################################
+########################## Camel Consumers ###########################
+######################################################################
+
+Consumers wrap the payload and creates the Exchange Object in the from() method.
+
+There are two types of consumers. The Event Driven and the Polling Consumer.
+
+- Event Driven: Reacts to events. Also called Asynchronous Consumers.
+Some examples of Event Driven Consumers are the JMS and the Kafka.
+
+- Polling Consumer: These are called Synchronous Consumers.
+They polls and reads the content from a source on regular intervals.
+For example: polling a directory on a regular interval (like every 30 minutes or once a day) in a FTP Server.
+
+######################################################################
+########################## Camel Producers ###########################
+######################################################################
+
+Producers in camel refers to an entity which can create and send a message to an endpoint.
+
+Producers convert the exchange according to the endpoint behind the scenes.

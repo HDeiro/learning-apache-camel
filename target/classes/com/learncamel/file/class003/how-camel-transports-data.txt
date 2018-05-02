@@ -1,0 +1,34 @@
+######################################################################
+######################## Exchange Architecture #######################
+######################################################################
+
+Apache Camel transports data through a Exchange class (part of camel-core library)
+that is used between the from() and to() methods and it's constrained in CamelContext.start().
+
+The Exchange Entity has:
+
+- Exchange ID: "Breadcumb ID", an unique ID for the elements transmitted in the Exchange.
+
+- Message Exchange Pattern (InOnly or InOut):  It's the behavior pattern for message exchanging. It can have two
+possible methods, the InOnly and the InOut. If you don't provide a method it's InOnly by default. You would like to
+use the InOut method if you want to send back an Event to the server after reading the message.
+
+- Exception: it's basically handlers for exceptions that occurs during the message exchange. It would be better
+explained on next classes.
+
+- Properties: Used to send customized values during exchange.
+
+- Message: It's a wrapper to the actual message sent during the exchange.
+It's architecture will be explained next. The Message Entity is a part of camel-core library.
+
+######################################################################
+######################## Message Architecture ########################
+######################################################################
+
+The Message Entity has:
+
+- Headers: It's Key-Value pairs that can be used for authentication and other useful info like mime-type, for example.
+
+- Attachments: Are optional. It's used for scenarios where you need to add extra info to the message.
+
+- Body: Is a java.lang.Object that can hold any kind of Object. It's the message itself.
