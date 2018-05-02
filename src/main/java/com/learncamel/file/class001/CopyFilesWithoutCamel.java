@@ -1,4 +1,4 @@
-package com.learncamel.file.firstclass;
+package com.learncamel.file.class001;
 
 import java.io.*;
 
