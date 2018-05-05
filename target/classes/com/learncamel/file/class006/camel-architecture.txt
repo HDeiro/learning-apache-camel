@@ -1,0 +1,11 @@
+The Apache Camel architecture is defined through a Camel Context that contains 3 components.
+
+These componentes are:
+
+- Route Engine: It's the main component of Apache Camel. Everything in Camel is a Route and it's possible to have
+a sort of routes to work on it.
+
+- Components: These components can do a sort of things like transfer files, work on messages and others. Some
+examples of Components are the file, jms, jdbc, kafka.
+
+- Message Processors: They're used to transform and manipulate the messages.
